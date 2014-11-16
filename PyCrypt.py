@@ -7,6 +7,10 @@ from PyErrors import TypeError
 
 def caeser(message, key, mode='encrypt'):
     """
+    Caesar cipher, A simple substitution cipher of type
+    monoalphabetic substitution (using same key through out
+    the encryption )
+
     :param message: Text to be encrypted/decrypted
     :param key: Key used to encryption/decryption
     :param mode: e: Encrypt the text, d: decrypt the text
@@ -31,18 +35,11 @@ def caeser(message, key, mode='encrypt'):
                 num = upper.find(symbol)
 
             if mode == 'encrypt':
-                num += key
+                num = (num + key) % 26
             elif mode == 'decrypt':
-                num -= key
+                num = (num - key) % 26
             else:
                 raise TypeError(mode, "Types allowed are: encrypt or decrypt")
-
-            # handle the wrap-around if num is larger than the length of
-            # 26 or less than 0
-            if num >= 26:
-                num -= 26
-            elif num < 0:
-                num += len(lower)
 
             # add encrypted/decrypted number's symbol at the end of translated
             if symbol in lower:
