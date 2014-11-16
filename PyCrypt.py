@@ -1,5 +1,6 @@
 from colorama import init, Fore, Back, Style
 import string
+from PyErrors import TypeError
 
 # init() # Need to be enabled when running on cmd
 
@@ -34,7 +35,7 @@ def caeser(message, key, mode='encrypt'):
             elif mode == 'decrypt':
                 num -= key
             else:
-                print("Unkown Mode!")
+                raise TypeError(mode, "Types allowed are: encrypt or decrypt")
 
             # handle the wrap-around if num is larger than the length of
             # 26 or less than 0
@@ -63,5 +64,3 @@ def rot13(message, mode='encrypt'):
 def reverse(text):
     return text[::-1]  # Extended Slices
 
-
-print(rot13('grfg', 'decrypt'))
