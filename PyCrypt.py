@@ -5,9 +5,9 @@ from PyErrors import TypeError
 # init() # Need to be enabled when running on cmd
 
 
-def caeser(message, key, mode='encrypt'):
+def caeser(message, key, mode='encrypt', symbols='all'):
     """
-    Caesar cipher, A simple substitution cipher of type
+    Caesar cipher, A simple substitution cipher of symbols
     monoalphabetic substitution (using same key through out
     the encryption )
 
@@ -17,10 +17,19 @@ def caeser(message, key, mode='encrypt'):
     :return: Cipher/Plain Text (according to the mode)
     """
 
-    # every possible symbol that can be encrypted
-    SYMBOLS = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
+    # Every possible symbol that can be encrypted
+    if symbols is 'numbers' or symbols is 'digits':
+        SYMBOLS = string.digits
+    elif symbols is 'letters':
+        SYMBOLS = string.ascii_letters
+    elif symbols is 'alphanumeric':
+        SYMBOLS = string.ascii_letters + string.digits
+    elif symbols is 'all':
+        SYMBOLS = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
+    else:
+        raise TypeError('symbols', 'Available symbols are: digits, letters, alphanumeric and all')
 
-    # stores the encrypted/decrypted form of the message
+    # Stores the encrypted/decrypted form of the message
     translated = ''
 
     # run the encryption/decryption code on each symbol in the message string
@@ -54,4 +63,5 @@ def reverse(text):
     return text[::-1]  # Extended Slices
 
 
-print(caeser('This Is my Secret message. 23421 @ // \\', 12))
+print(caeser('This Is my Secret message. 23421 @ // \\', 12, mode='encrypt', symbols='all'))
+
