@@ -1,6 +1,8 @@
 PyCrypt
 =======
 
+Most of the algorithms here are based upon or an edited version of (Hacking Secret Ciphers with Python)[http://inventwithpython.com/hacking] (BSD Licensed)
+
 ### Implementations of some ciphers:
 
 * [Caeser Cipher](http://en.wikipedia.org/wiki/Caesar_cipher)
