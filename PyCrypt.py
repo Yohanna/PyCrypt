@@ -18,34 +18,26 @@ def caeser(message, key, mode='encrypt'):
     """
 
     # every possible symbol that can be encrypted
-    lower = string.ascii_lowercase
-    upper = string.ascii_uppercase
+    SYMBOLS = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
 
     # stores the encrypted/decrypted form of the message
     translated = ''
 
     # run the encryption/decryption code on each symbol in the message string
     for symbol in message:
-        if symbol in lower or symbol in upper:
+        if symbol in SYMBOLS:
             # get the encrypted (or decrypted) number for this symbol
-
-            num = lower.find(symbol)  # If symbol is lowercase
-
-            if num == -1:  # Upper case symbol
-                num = upper.find(symbol)
+            num = SYMBOLS.find(symbol)  # If symbol is lowercase
 
             if mode == 'encrypt':
-                num = (num + key) % 26
+                num = (num + key) % len(SYMBOLS)
             elif mode == 'decrypt':
-                num = (num - key) % 26
+                num = (num - key) % len(SYMBOLS)
             else:
                 raise TypeError(mode, "Types allowed are: encrypt or decrypt")
 
             # add encrypted/decrypted number's symbol at the end of translated
-            if symbol in lower:
-                translated += lower[num]
-            else:
-                translated += upper[num]
+            translated += SYMBOLS[num]
 
         else:
             # just add the symbol without encrypting/decrypting
@@ -61,3 +53,5 @@ def rot13(message, mode='encrypt'):
 def reverse(text):
     return text[::-1]  # Extended Slices
 
+
+print(caeser('This Is my Secret message. 23421 @ // \\', 12))
