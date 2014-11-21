@@ -8,5 +8,6 @@ python:
 # command to install dependencies
 install: "pip install colorama"
 
-# command to run tests
+# command to run tests.
+# Command has to exit with status 0. true returns 0 on Unixes...duh !
 script: true
