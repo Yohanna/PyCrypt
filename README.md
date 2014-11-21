@@ -1,3 +1,5 @@
+[![Build Status](https://magnum.travis-ci.com/Yohanna/PyCrypt.svg?token=fHp3LSzd1PvdmzoJRCGJ&branch=master)](https://magnum.travis-ci.com/Yohanna/PyCrypt)
+
 PyCrypt
 =======
 
