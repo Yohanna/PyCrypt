@@ -1,0 +1,2 @@
+# Ignore README.md during merges
+README.md merge=ours
