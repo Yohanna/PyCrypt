@@ -55,3 +55,6 @@ target/
 
 # PyCharm Files
 .idea/
+
+# Testing Stuff
+test.py
