@@ -58,3 +58,6 @@ target/
 
 # Testing Stuff
 test.py
+
+# Ignore README during merges
+README.md merge=ours
