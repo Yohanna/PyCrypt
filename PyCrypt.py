@@ -63,5 +63,4 @@ def reverse(text):
     return text[::-1]  # Extended Slices
 
 
-print(caeser('This Is my Secret message. 23421 @ // \\', 12, mode='encrypt', symbols='all'))
 
