@@ -28,11 +28,12 @@ Also, some [Cryptanalysis](http://en.wikipedia.org/wiki/Cryptanalysis) will be t
 * [One-time pad](http://en.wikipedia.org/wiki/One-time_pad)
 * [Running key cipher](http://en.wikipedia.org/wiki/Running_key_cipher)
 
-## Development
+### Development
 
 The master branch contains the latest stable codebase.
 
 The [dev](https://github.com/Yohanna/PyCrypt/tree/dev) branch contains new features/algorithms to the module, which will be merged into master when it passes the build.
 
+======
 
 Some of the algorithms here will be based upon or an edited version of [Hacking Secret Ciphers with Python](http://inventwithpython.com/hacking) (BSD Licensed)
