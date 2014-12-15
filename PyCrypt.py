@@ -1,11 +1,10 @@
-from colorama import init, Fore, Back, Style
 import string
-from PyErrors import TypeError
+from PyErrors import TypeError, SymbolsError
 
 # init() # Need to be enabled when running on cmd
 
 
-def caeser(message, key, mode='encrypt', scope='all'):
+def caeser(message, key, mode='encrypt', scope='all', custom=''):
     """
     Caesar cipher, A simple substitution cipher classed as a type of
     monoalphabetic substitution (using same key/replacements through out
@@ -18,6 +17,10 @@ def caeser(message, key, mode='encrypt', scope='all'):
     :return: Cipher/Plain Text (according to the mode)
     """
 
+    if scope is 'custom' and custom == '':
+        raise SymbolsError("You need to provide a custom symbols list if you used the 'custom' option for scope")
+
+
     # Every possible symbol that can be encrypted
     if scope is 'numbers' or scope is 'digits':  # Only digits will be encrypted
         symbols_list = string.digits
@@ -27,10 +30,10 @@ def caeser(message, key, mode='encrypt', scope='all'):
         symbols_list = string.ascii_letters + string.digits
     elif scope is 'all':
         symbols_list = ' !"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~'
-    elif scope.isprintable():  # The user supplied a custom list
-        symbols_list = scope
+    elif scope is 'custom' and scope.isprintable():  # The user supplied a custom list
+        symbols_list = custom
     else:
-        raise TypeError(scope, 'Only list of strings are allowed!')
+        raise TypeError(scope, "digits, letters, alphanumeric and all (printable characters), are the only allowed scope")
 
     # Stores the encrypted/decrypted form of the message
     translated = ''

@@ -14,3 +14,11 @@ class TypeError(Error):
     def __init__(self, type, msg):
         self.type = type
         self.msg = msg
+
+
+class SymbolsError(Error):
+    """
+    Exception raised if the custom symbols list supplied is empty
+    """
+    def __init__(self, msg):
+        self.msg = msg
