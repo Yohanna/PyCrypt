@@ -1,4 +1,4 @@
-[![Build Status](https://magnum.travis-ci.com/Yohanna/PyCrypt.svg?token=fHp3LSzd1PvdmzoJRCGJ&branch=master)](https://magnum.travis-ci.com/Yohanna/PyCrypt)
+[![Build Status](https://travis-ci.org/Yohanna/PyCrypt.svg?branch=master)](https://travis-ci.org/Yohanna/PyCrypt)
 
 PyCrypt
 =======
