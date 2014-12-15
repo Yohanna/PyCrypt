@@ -1,4 +1,4 @@
-[![Build Status](https://magnum.travis-ci.com/Yohanna/PyCrypt.svg?token=fHp3LSzd1PvdmzoJRCGJ&branch=dev)](https://magnum.travis-ci.com/Yohanna/PyCrypt)
+[![Build Status](https://travis-ci.org/Yohanna/PyCrypt.svg?branch=dev)](https://travis-ci.org/Yohanna/PyCrypt)
 
 
 ## Development
