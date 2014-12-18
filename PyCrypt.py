@@ -1,5 +1,5 @@
 import string
-from PyErrors import TypeError, SymbolsError
+import PyErrors
 
 # init() # Need to be enabled when running on cmd
 
@@ -18,7 +18,7 @@ def caeser(message, key, mode='encrypt', scope='all', custom=''):
     """
 
     if scope is 'custom' and custom == '':
-        raise SymbolsError("You need to provide a custom symbols list if you used the 'custom' option for scope")
+        raise PyErrors.SymbolsError("You need to provide a custom symbols list if you used the 'custom' option for scope")
 
 
     # Every possible symbol that can be encrypted
@@ -33,7 +33,7 @@ def caeser(message, key, mode='encrypt', scope='all', custom=''):
     elif scope is 'custom' and scope.isprintable():  # The user supplied a custom list
         symbols_list = custom
     else:
-        raise TypeError(scope, "digits, letters, alphanumeric and all (printable characters), are the only allowed scope")
+        raise PyErrors.TypeError(scope, "digits, letters, alphanumeric and all (printable characters), are the only allowed scope")
 
     # Stores the encrypted/decrypted form of the message
     translated = ''
@@ -49,7 +49,7 @@ def caeser(message, key, mode='encrypt', scope='all', custom=''):
             elif mode == 'decrypt':
                 num = (num - key) % len(symbols_list)
             else:
-                raise TypeError(mode, "Types allowed are: encrypt or decrypt")
+                raise PyErrors.TypeError(mode, "Types allowed are: encrypt or decrypt")
 
             # add encrypted/decrypted number's symbol at the end of translated
             translated += symbols_list[num]
@@ -61,8 +61,8 @@ def caeser(message, key, mode='encrypt', scope='all', custom=''):
     return translated
 
 
-def rot13(message, mode='encrypt'):
-    return caeser(message, 13, mode)
+def rot13(message, mode='encrypt', scope='all', custom=''):
+    return caeser(message, 13, mode, scope, custom)
 
 
 def reverse(text):
