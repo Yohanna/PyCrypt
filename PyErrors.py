@@ -22,3 +22,12 @@ class SymbolsError(Error):
     """
     def __init__(self, msg):
         self.msg = msg
+
+
+class WeakKeyError(Error):
+    """
+    Raised when the key used is too weak to continue.
+    """
+    def __init__(self, msg, key):
+        self.msg = msg
+        self.key = key
