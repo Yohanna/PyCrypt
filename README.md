@@ -1,5 +1,8 @@
 [![Build Status](https://travis-ci.org/Yohanna/PyCrypt.svg?branch=master)](https://travis-ci.org/Yohanna/PyCrypt)
 [![Analytics](https://ga-beacon.appspot.com/UA-57898843-1/PyCrypt/README.md)](https://github.com/igrigorik/ga-beacon)
+[![License](https://img.shields.io/badge/license-Affero%20GPL-blue.svg?style=flat)](https://github.com/Yohanna/PyCrypt/blob/master/LICENSE)
+
+
 
 PyCrypt
 =======
