@@ -19,13 +19,12 @@ Also, some [Cryptanalysis](http://en.wikipedia.org/wiki/Cryptanalysis) will be t
 * Reverse Cipher ( Not sure I can even call it a cipher! )
 * [Caeser Cipher](http://en.wikipedia.org/wiki/Caesar_cipher)
 * [ROT13](http://en.wikipedia.org/wiki/ROT13)
-
+* [Transposition cipher](http://en.wikipedia.org/wiki/Transposition_cipher)
 
 ### TODO
 
 * [Vigenère cipher](http://en.wikipedia.org/wiki/Vigen%C3%A8re_cipher)
     * [Beaufort cipher](http://en.wikipedia.org/wiki/Beaufort_cipher)
-* [Transposition cipher](http://en.wikipedia.org/wiki/Transposition_cipher)
 * [Affine cipher](http://en.wikipedia.org/wiki/Affine_cipher)
 * [Multiplicative Ciphers](http://www.nku.edu/~christensen/section%206%20multiplicative%20ciphers.pdf) (PDF)
 * [Playfair cipher](http://en.wikipedia.org/wiki/Playfair_cipher)
