@@ -14,3 +14,20 @@ class TypeError(Error):
     def __init__(self, type, msg):
         self.type = type
         self.msg = msg
+
+
+class SymbolsError(Error):
+    """
+    Exception raised if the custom symbols list supplied is empty
+    """
+    def __init__(self, msg):
+        self.msg = msg
+
+
+class WeakKeyError(Error):
+    """
+    Raised when the key used is too weak to continue.
+    """
+    def __init__(self, msg, key):
+        self.msg = msg
+        self.key = key

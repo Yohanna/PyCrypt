@@ -1,2 +1,5 @@
+# Normalize/Convert line endings to LF.
+* text=auto
+
 # Ignore README.md during merges
 README.md merge=ours
