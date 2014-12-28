@@ -30,6 +30,7 @@ Also, some [Cryptanalysis](http://en.wikipedia.org/wiki/Cryptanalysis) will be t
 * [Playfair cipher](http://en.wikipedia.org/wiki/Playfair_cipher)
 * [One-time pad](http://en.wikipedia.org/wiki/One-time_pad)
 * [Running key cipher](http://en.wikipedia.org/wiki/Running_key_cipher)
+* [Solitaire / Pontifex](http://en.wikipedia.org/wiki/Solitaire_(cipher))
 
 ### Development
 
