@@ -14,12 +14,12 @@ The purpose of the module is to serve as an introduction to the field of cryptog
 Also, some [Cryptanalysis](http://en.wikipedia.org/wiki/Cryptanalysis) will be tackled along the way. Specifically [Frequency Analysis](http://en.wikipedia.org/wiki/Frequency_analysis) against simple substitution ciphers.
 
 
-### Implemented:
+### Ciphers Implemented:
 
-* Reverse Cipher ( Not sure I can even call it a cipher! )
-* [Caeser Cipher](http://en.wikipedia.org/wiki/Caesar_cipher)
-* [ROT13](http://en.wikipedia.org/wiki/ROT13)
-* [Transposition cipher](http://en.wikipedia.org/wiki/Transposition_cipher)
+* [x] Reverse Cipher ( Not sure I can even call it a cipher! )
+* [x] [Caeser Cipher](http://en.wikipedia.org/wiki/Caesar_cipher)
+* [x] [ROT13](http://en.wikipedia.org/wiki/ROT13)
+* [x] [Transposition cipher](http://en.wikipedia.org/wiki/Transposition_cipher)
 
 ### TODO
 
