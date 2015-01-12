@@ -73,7 +73,7 @@ class Transposition:
     def encrypt(message, key):
 
         if key > len(message) / 2:
-            raise PyErrors.WeakKeyError(key, "The key used can't be larger than half the message length.")
+            raise PyErrors.WeakKeyError("The key used '%s' can't be larger than half the message length '%s'." % (key, int(len(message)/2)))
 
         # Each string in cipher_text represents a column in the grid.
         # The number of columns in the grid equals to the key.

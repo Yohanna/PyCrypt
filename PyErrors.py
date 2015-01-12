@@ -28,6 +28,5 @@ class WeakKeyError(Error):
     """
     Raised when the key used is too weak to continue.
     """
-    def __init__(self, msg, key):
+    def __init__(self, msg):
         self.msg = msg
-        self.key = key
