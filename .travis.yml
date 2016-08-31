@@ -4,9 +4,10 @@ python:
   - "3.2"
   - "3.3"
   - "3.4"
-  
+
 # command to install dependencies
-install: "pip install colorama"
+install:
+   - "pip install -r requirements.txt"
 
 # command to run tests.
 # Command has to exit with status 0. true returns 0 on Unixes...duh !
