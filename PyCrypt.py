@@ -2,6 +2,8 @@ import string
 import PyErrors
 import math
 
+# init() # Need to be enabled when running on cmd
+
 
 def caeser(message, key, mode='encrypt', scope='all', custom=''):
     """
