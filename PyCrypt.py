@@ -14,7 +14,9 @@ def caeser(message, key, mode='encrypt', scope='all', custom=''):
     :rtype : string
     :param message: Text to be encrypted/decrypted
     :param key: Key used to encryption/decryption
-    :param mode: e: Encrypt the text, d: decrypt the text
+    :param mode: encrypt: Encrypts the text, decrypt: Decrypts the text
+    :param scope: Selects which part of the message will be processed, i.e letters, digits..etc
+    :param custom: String of custom characters that the user wants to be processed
     :return: Cipher/Plain Text (according to the mode)
     """
 
